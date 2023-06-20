@@ -16,8 +16,8 @@ body::-webkit-scrollbar {
 }
 
 ::selection {
-    background-color: #2C3E50;
-    color: #FD746C;
+    background-color: lightseagreen;
+    color: #0c0c0c;
 }
 
 h1, h3, h5, p {
@@ -50,6 +50,7 @@ header img:is(:hover,:focus) {
 section {
     scroll-snap-align: start;
     animation: opacity;
+    height: 100vh;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
@@ -77,12 +78,15 @@ header nav a {
     margin-left: 35px;
 }
 
+header nav a:hover {
+    color: lightseagreen;
+}
+
 nav a.active {
     color: lightseagreen;
 }
 
 .container {
-    display: flex;
     align-items: center;
     align-content: center;
     justify-items: center;
@@ -258,6 +262,9 @@ nav a.active {
     0 0 60px lightseagreen, 0 0 120px lightseagreen;
 
     transform: scale(1.2);
+
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .skills {
@@ -290,7 +297,7 @@ nav a.active {
 .skillsWrapper div .outerSpan {
     position: relative;
     width: 300px;
-    height: 10px;
+    height: 15px;
     border-radius: 4px;
     background-color: grey;
 }
@@ -298,15 +305,50 @@ nav a.active {
 .skillsWrapper div .outerSpan .innerSpan {
     position: absolute;
     width: 0px;
-    height: 10px;
+    height: 15px;
     border-radius: 4px;
     background-color: lightseagreen;
-    animation: fillingAnim 2s forwards;
+    /*animation: fillingAnim 7s infinite;*/
+    transition: 1s;
+}
+
+section:target .skillsWrapper div .outerSpan .innerSpan {
+    position: absolute;
+    width: 0px;
+    height: 15px;
+    border-radius: 4px;
+    background-color: lightseagreen;
+    animation: fillingAnim 7s infinite;
+    transition: 1s;
+}
+
+.skillsWrapper div .outerSpan .innerSpan:hover {
+    box-shadow: 0 0 2px lightseagreen,
+    0 0 10px lightseagreen, 0 0 20px lightseagreen,
+    0 0 60px lightseagreen, 0 0 120px lightseagreen;
 }
 
 @keyframes fillingAnim {
-    100% {
+    0% {
+        width: 0;
+    }
+    50% {
         width: 200px;
+    }
+    60% {
+        width: 200px;
+    }
+    70% {
+        width: 0;
+    }
+    80% {
+        width: 0;
+    }
+    90% {
+        width: 0;
+    }
+    100% {
+        width: 0;
     }
 }
 

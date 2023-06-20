@@ -14,8 +14,6 @@ const navLinks = document.querySelectorAll('nav a');
 let activeSectionId = null;
 let previousSectionId = null;
 
-let isPageReloaded = false;
-
 const options = {
     threshold: 0.8
 };
@@ -26,13 +24,22 @@ const observer = new IntersectionObserver(function(entries) {
         const correspondingNavLink = document.querySelector(`nav a[href="#${id}"]`);
 
         if (entry.intersectionRatio > 0) {
+
+            updateURLFragment(id)
+            console.log(id)
+            console.log(correspondingNavLink)
+
             setActiveNavLink(correspondingNavLink);
             previousSectionId = activeSectionId;
             activeSectionId = id;
-
+            console.log("active: " + activeSectionId)
         }
     });
 }, options);
+
+function updateURLFragment(id) {
+    history.replaceState(null, '', `#${id}`);
+}
 
 sections.forEach(section => {
     observer.observe(section);
@@ -45,10 +52,6 @@ function setActiveNavLink(activeNavLink) {
 
     activeNavLink.classList.add('active');
 
-}
-
-function reloadActivePage() {
-    location.reload();
 }
 
 function increasePercentage() {
