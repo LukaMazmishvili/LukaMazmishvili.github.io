@@ -14,6 +14,8 @@ const navLinks = document.querySelectorAll('nav a');
 let activeSectionId = null;
 let previousSectionId = null;
 
+let isPageReloaded = false;
+
 const options = {
     threshold: 0.8
 };
@@ -27,6 +29,7 @@ const observer = new IntersectionObserver(function(entries) {
             setActiveNavLink(correspondingNavLink);
             previousSectionId = activeSectionId;
             activeSectionId = id;
+
         }
     });
 }, options);
@@ -41,4 +44,13 @@ function setActiveNavLink(activeNavLink) {
     });
 
     activeNavLink.classList.add('active');
+
+}
+
+function reloadActivePage() {
+    location.reload();
+}
+
+function increasePercentage() {
+    let number = document.getElementById("percentage")
 }
