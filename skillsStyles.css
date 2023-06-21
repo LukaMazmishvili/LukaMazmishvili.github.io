@@ -1,0 +1,110 @@
+.skillsWrapper #kotlin .innerSpan {
+    animation: KotlinFillingAnim 5s forwards;
+}
+
+@keyframes KotlinFillingAnim {
+    100%{
+        width: 80%;
+    }
+}
+
+.skillsWrapper #xml .innerSpan {
+    animation: XmlFillingAnim 5s forwards;
+}
+
+@keyframes XmlFillingAnim {
+    100% {
+        width: 70%;
+    }
+}
+
+.skillsWrapper #jetpack-compose .innerSpan {
+    animation: JetpackFillingAnim 5s forwards;
+}
+
+@keyframes JetpackFillingAnim {
+    100%{
+        width: 30%;
+    }
+}
+
+.skillsWrapper #java .innerSpan {
+    animation: JavaFillingAnim 5s forwards;
+}
+
+@keyframes JavaFillingAnim {
+    100%{
+        width: 40%;
+    }
+}
+
+.skillsWrapper #oracle .innerSpan {
+    animation: OracleFillingAnim 5s forwards;
+}
+
+@keyframes OracleFillingAnim {
+    100%{
+        width: 60%;
+    }
+}
+
+.skillsWrapper #mysql .innerSpan {
+    animation: MySQLFillingAnim 5s forwards;
+}
+
+@keyframes MySQLFillingAnim {
+    100%{
+        width: 40%;
+    }
+}
+
+.skillsWrapper #sqlite .innerSpan {
+    animation: SQLiteFillingAnim 5s forwards;
+}
+
+@keyframes SQLiteFillingAnim {
+    100%{
+        width: 55%;
+    }
+}
+
+.skillsWrapper #html .innerSpan {
+    animation: HTMLFillingAnim 5s forwards;
+}
+
+@keyframes HTMLFillingAnim {
+    100%{
+        width: 60%;
+    }
+}
+
+.skillsWrapper #css .innerSpan {
+    animation: CSSFillingAnim 5s forwards;
+}
+
+@keyframes CSSFillingAnim {
+    100%{
+        width: 45%;
+    }
+}
+
+.skillsWrapper #js .innerSpan {
+    animation: JSFillingAnim 5s forwards;
+}
+
+@keyframes JSFillingAnim {
+    100%{
+        width: 20%;
+    }
+}
+
+.skillsWrapper #anims .innerSpan {
+    animation: AnimsFillingAnim 5s forwards;
+}
+
+@keyframes AnimsFillingAnim {
+    100%{
+        width: 35%;
+    }
+}
+

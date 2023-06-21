@@ -87,6 +87,7 @@ nav a.active {
 }
 
 .container {
+    opacity: 0;
     align-items: center;
     align-content: center;
     justify-items: center;
@@ -94,6 +95,20 @@ nav a.active {
     padding: 0 10%;
     height: 100vh;
     z-index: 100;
+    transition: 2s;
+}
+
+.container.active {
+    animation: containerOpacity 3s forwards;
+}
+
+@keyframes containerOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .home {
@@ -303,16 +318,18 @@ nav a.active {
 }
 
 .skillsWrapper div .outerSpan .innerSpan {
-    position: absolute;
-    width: 0px;
-    height: 15px;
-    border-radius: 4px;
-    background-color: lightseagreen;
-    /*animation: fillingAnim 7s infinite;*/
-    transition: 1s;
+    display: none;
+    /*position: absolute;*/
+    /*width: 0px;*/
+    /*height: 15px;*/
+    /*border-radius: 4px;*/
+    /*background-color: lightseagreen;*/
+    /*transition: 1s;*/
+    /*box-shadow: 0 0 0 0.5px black;*/
 }
 
-section:target .skillsWrapper div .outerSpan .innerSpan {
+section .active .skillsWrapper div .outerSpan .innerSpan {
+    display: block;
     position: absolute;
     width: 0px;
     height: 15px;
@@ -320,36 +337,49 @@ section:target .skillsWrapper div .outerSpan .innerSpan {
     background-color: lightseagreen;
     animation: fillingAnim 7s infinite;
     transition: 1s;
+    box-shadow: 0 0 0 0.5px black;
 }
 
-.skillsWrapper div .outerSpan .innerSpan:hover {
+section .active .skillsWrapper div .outerSpan .innerSpan:hover {
     box-shadow: 0 0 2px lightseagreen,
     0 0 10px lightseagreen, 0 0 20px lightseagreen,
     0 0 60px lightseagreen, 0 0 120px lightseagreen;
 }
 
 @keyframes fillingAnim {
-    0% {
-        width: 0;
-    }
-    50% {
-        width: 200px;
-    }
-    60% {
-        width: 200px;
-    }
-    70% {
-        width: 0;
-    }
-    80% {
-        width: 0;
-    }
-    90% {
-        width: 0;
-    }
     100% {
-        width: 0;
+        width: 200px;
     }
+}
+
+.projects {
+    display: grid;
+    column-count: 1;
+    grid-template-columns: 1fr;
+    place-items: center;
+}
+
+.projectsWrapper {
+    display: flex;
+    place-items: center;
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    margin: 10px;
+    width: 130px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+.project img {
+    width: 50px;
+    height: 50px;
 }
 
 .message {
