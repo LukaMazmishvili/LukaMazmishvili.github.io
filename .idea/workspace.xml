@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7efbc71b-4966-4227-91fc-8a33a12f69a5" name="Changes" comment="Finished Skills Page and Small Changes In Projects Page">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="7efbc71b-4966-4227-91fc-8a33a12f69a5" name="Changes" comment="3 pages became responsive for phones" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687344066859</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="3 pages became responsive for phones">
+      <created>1687438195321</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1687438195321</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,6 +113,7 @@
     <MESSAGE value="Added Skills Page, Small changes in overall project" />
     <MESSAGE value="Minimal touches" />
     <MESSAGE value="Finished Skills Page and Small Changes In Projects Page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Skills Page and Small Changes In Projects Page" />
+    <MESSAGE value="3 pages became responsive for phones" />
+    <option name="LAST_COMMIT_MESSAGE" value="3 pages became responsive for phones" />
   </component>
 </project>

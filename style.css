@@ -668,10 +668,6 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
         scrollbar-color: transparent transparent;
     }
 
-    .container {
-        padding: 0;
-    }
-
     .home h1 {
         font-size: 25px;
     }
