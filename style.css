@@ -53,6 +53,7 @@ section {
     animation: opacity;
     /*min-height: 100vh;*/
     height: 100%;
+    width: 100%;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
@@ -96,8 +97,8 @@ nav a.active {
     justify-items: center;
     justify-content: center;
     padding: 0 10%;
-    height: 100vh;
-    /*height: 100%;*/
+    /*height: 100vh;*/
+    height: 100%;
     transition: 2s;
 }
 
@@ -262,11 +263,11 @@ nav a.active {
     margin-top: 50px;
     margin-left: 25px;
     padding: 8px;
-    transition: 0.5s;
+    transition: 0.5s ease-in-out;
     /*outline: 1px solid #fff;*/
 
     box-shadow: 0 0 2px lightseagreen,
-    0 0 5px lightseagreen;
+                0 0 5px lightseagreen;
 
     border: 2px solid white;
     border-radius: 5px;
@@ -331,7 +332,7 @@ nav a.active {
     /*box-shadow: 0 0 0 0.5px black;*/
 }
 
-section .active .skillsWrapper div .outerSpan .innerSpan {
+section.active .skillsWrapper div .outerSpan .innerSpan {
     display: block;
     position: absolute;
     width: 0px;
@@ -406,14 +407,17 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
     margin: 20px;
     text-align: justify;
     text-justify: inter-word;
-    animation: showText 2s forwards ease-in-out;
+    /*font-size: 15px;*/
+    transition: font-size 1s ease;
+    animation: showText 2s forwards;
 }
 
 @keyframes showText {
     0% {
-        height: 5px;
+        height: 30%;
         opacity: 0;
         font-size: 2px;
+
     }
     30% {
         opacity: 0;
@@ -651,5 +655,107 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
 
 .contact .infoBox .socialMedia li a:hover {
     color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scroll-snap-type: y mandatory;
+        height: 100vh;
+        width: 100%;
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    .home h1 {
+        font-size: 25px;
+    }
+
+    .home p {
+        font-size: 20px;
+    }
+
+    .about h1 {
+        font-size: 25px;
+    }
+
+    .about p {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .about .Buttons {
+        display: grid;
+        column-count: 1;
+    }
+
+    .about .Buttons a {
+        width: 100px;
+        margin-top: 30px;
+        margin-left: 10px;
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .about .Buttons a:is(:hover, :focus) {
+        outline-offset: unset;
+        box-shadow: 0 0 2px lightseagreen,
+                    0 0 5px lightseagreen;;
+        transform: unset;
+        margin-left: 10px;
+        margin-right: unset;
+    }
+
+    .skillsWrapper {
+        display: grid;
+        column-count: 1;
+        width: 80%;
+        left: 10%;
+        right: 10%;
+        align-items: flex-start;
+        grid-template-columns: 1fr;
+    }
+
+    .skillsWrapper div .skillText {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 20px;
+        margin: 3px;
+    }
+
+    .skillsWrapper div {
+        display: grid;
+        column-count: 1;
+        grid-template-columns: 1fr;
+        width: 100%;
+        /*margin-right: 20px;*/
+    }
+
+    .skillsWrapper div .outerSpan {
+        position: relative;
+        width: 100%;
+        height: 10px;
+        border-radius: 4px;
+        background-color: grey;
+    }
+
+    section.active .skillsWrapper div .outerSpan .innerSpan {
+        display: block;
+        position: absolute;
+        width: 0px;
+        height: 10px;
+        border-radius: 4px;
+        background-color: lightseagreen;
+        animation: fillingAnim 7s infinite;
+        transition: 1s;
+        box-shadow: 0 0 0 0.5px black;
+    }
 }
 
