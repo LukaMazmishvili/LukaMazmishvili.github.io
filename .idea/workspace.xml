@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7efbc71b-4966-4227-91fc-8a33a12f69a5" name="Changes" comment="Minimal touches">
+    <list default="true" id="7efbc71b-4966-4227-91fc-8a33a12f69a5" name="Changes" comment="Finished Skills Page and Small Changes In Projects Page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
@@ -77,7 +77,8 @@
       <workItem from="1687199237141" duration="9303000" />
       <workItem from="1687269772430" duration="13460000" />
       <workItem from="1687288267742" duration="12543000" />
-      <workItem from="1687335236891" duration="8700000" />
+      <workItem from="1687335236891" duration="9621000" />
+      <workItem from="1687379490394" duration="13411000" />
     </task>
     <task id="LOCAL-00001" summary="Added Skills Page, Small changes in overall project">
       <created>1687277197969</created>
@@ -93,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687296449538</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Finished Skills Page and Small Changes In Projects Page">
+      <created>1687344066859</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1687344066859</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +110,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Skills Page, Small changes in overall project" />
     <MESSAGE value="Minimal touches" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minimal touches" />
+    <MESSAGE value="Finished Skills Page and Small Changes In Projects Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished Skills Page and Small Changes In Projects Page" />
   </component>
 </project>

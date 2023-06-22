@@ -75,6 +75,29 @@ window.addEventListener("focus", () => {
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('nav a');
 
+const expandButtons = document.querySelectorAll('.seeMore');
+const containers = document.querySelectorAll('.project');
+
+expandButtons.forEach((button, index) => {
+    button.addEventListener('click', function(e) {
+        e.stopPropagation();
+        containers.forEach((container, containerIndex) => {
+            if (containerIndex === index) {
+                container.classList.toggle('expand');
+            } else {
+                container.classList.remove('expand');
+            }
+        });
+    });
+});
+
+document.addEventListener('click', function() {
+    containers.forEach(container => {
+        container.classList.remove('expand');
+    });
+});
+
+
 let activeSectionId = null;
 let previousSectionId = null;
 

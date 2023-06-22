@@ -2,18 +2,18 @@
 body {
     margin: 0;
     padding: 0;
-    overflow: scroll;
-    scroll-snap-type: y mandatory;
-    overflow-x: hidden;
-    scrollbar-width: thin;
-    scrollbar-color: transparent transparent;
+    /*overflow: scroll;*/
+    /*scroll-snap-type: y mandatory;*/
+    /*overflow-x: hidden;*/
+    /*scrollbar-width: thin;*/
+    /*scrollbar-color: transparent transparent;*/
     box-sizing: border-box;
     background: #0c0c0c;
 }
 
-body::-webkit-scrollbar {
-    width: 0.0rem;
-}
+/*body::-webkit-scrollbar {*/
+/*    width: 0.0rem;*/
+/*}*/
 
 ::selection {
     background-color: lightseagreen;
@@ -39,6 +39,7 @@ header img:is(:hover,:focus) {
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     height: 100vh;
+    /*height: 100%;*/
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
 }
@@ -50,7 +51,8 @@ header img:is(:hover,:focus) {
 section {
     scroll-snap-align: start;
     animation: opacity;
-    height: 100vh;
+    /*min-height: 100vh;*/
+    height: 100%;
     animation-duration: 1s;
     animation-fill-mode: forwards;
 }
@@ -69,7 +71,8 @@ header {
     justify-content: space-between;
 }
 
-header nav a {
+header nav a,
+header nav a:target {
     font-size: 20px;
     color: #ededed;
     text-decoration: none;
@@ -94,7 +97,7 @@ nav a.active {
     justify-content: center;
     padding: 0 10%;
     height: 100vh;
-    z-index: 100;
+    /*height: 100%;*/
     transition: 2s;
 }
 
@@ -366,20 +369,109 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
 
 .project {
     display: flex;
+    position: relative;
     flex-direction: column;
     box-sizing: border-box;
     border: 2px solid #ffffff;
     border-radius: 10px;
     margin: 10px;
     width: 130px;
+    transition: 1s;
     height: 300px;
     justify-content: center;
     align-items: center;
 }
 
+.project.expand {
+    width: 400px;
+    height: 450px;
+    margin: 30px;
+
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.project .projectDescription h1 {
+    display: none;
+}
+
+.project.expand .projectDescription h1 {
+    display: block;
+    height: 40%;
+    margin: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+    animation: showText 2s forwards ease-in-out;
+}
+
+@keyframes showText {
+    0% {
+        height: 5px;
+        opacity: 0;
+        font-size: 2px;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        height: 40%;
+        opacity: 1;
+        font-size: 15px;
+    }
+}
+
+.project .seeMore {
+    padding: 10px;
+
+    background-color: transparent;
+
+    box-shadow: 0 0 2px lightseagreen,
+    0 0 5px lightseagreen;
+
+    border: 2px solid white;
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+.project .seeMore:hover {
+    box-shadow: 0 0 2px lightseagreen,
+    0 0 10px lightseagreen, 0 0 20px lightseagreen,
+    0 0 60px lightseagreen, 0 0 120px lightseagreen;
+
+    transform: scale(1.2);
+
+    margin-outside: 40px;
+}
+
+.project .seeMore::before {
+    content: "See More";
+    color: white;
+}
+
+.project.expand .seeMore::before {
+    content: "";
+}
+
+.project.expand .seeMore::after {
+    content: "See Less";
+    color: white;
+}
+
 .project img {
     width: 50px;
     height: 50px;
+}
+
+.project .projectButton {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
 }
 
 .message {
@@ -393,21 +485,21 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
     color: white;
 }
 
-form {
+.message form {
     width: 90%;
     min-width: 600px;
 }
 
-form * {
+.message form * {
     border-radius: 5px;
 }
 
-.input-group {
+.message .input-group {
     position: relative;
     margin-bottom: 10px;
 }
 
-input, textarea {
+.message input, textarea {
     width: 100%;
     padding: 10px;
     outline: 0;
@@ -418,7 +510,7 @@ input, textarea {
     font-size: 15px;
 }
 
-label {
+.message label {
     height: 100px;
     position: absolute;
     left: 0;
@@ -428,7 +520,7 @@ label {
     cursor: text;
 }
 
-button {
+.message button {
     padding: 10px 0;
     color: #fff;
     outline: 1px solid #fff;
@@ -439,20 +531,20 @@ button {
     cursor: pointer;
 }
 
-button:is(:hover, :focus) {
+.message button:is(:hover, :focus) {
     outline-offset: 5px;
 }
 
-input:focus,
-textarea:focus {
+.message input:focus,
+.message textarea:focus {
     margin-bottom: 15px;
     margin-top: 20px;
 }
 
-input:focus ~ label,
-input:valid ~ label,
-textarea:focus ~ label,
-textarea:valid ~ label {
+.message input:focus ~ label,
+.message input:valid ~ label,
+.message textarea:focus ~ label,
+.message textarea:valid ~ label {
     top: -10px;
     font-size: 14px;
 }
@@ -465,3 +557,99 @@ textarea:valid ~ label {
         opacity: 1;
     }
 }
+
+.contact {
+    display: grid;
+    height: 100vh;
+}
+
+.contact h1 {
+    margin-bottom: 50px;
+}
+
+.contact .infoBox {
+    display: grid;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    border-radius: 30px;
+    box-shadow: 0 0 2px lightseagreen,
+    0 0 5px lightseagreen;
+    background: rgba(0, 255, 241, 0.05);
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .infoBox .infoWrapper {
+    margin-bottom: 30px;
+}
+
+.contact .infoBox .infoWrapper div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contact .infoBox div span {
+    min-width: 40px;
+    height: 40px;
+    color: white;
+    background: lightseagreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.contact .infoBox div a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.contact .infoBox .socialMedia {
+    margin-right: 40px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+.contact .infoBox .socialMedia li {
+    list-style: none;
+    margin-right: 15px;
+}
+
+.contact .infoBox .socialMedia li span{
+    border: 0 transparent;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.contact .infoBox .socialMedia li:nth-child(1) a:hover {
+    color: #3b5998;
+}
+
+.contact .infoBox .socialMedia li:nth-child(2) a:hover {
+    color: #bc1888;
+}
+
+.contact .infoBox .socialMedia li:nth-child(3) a:hover {
+    color: #0e76a8 ;
+}
+
+.contact .infoBox .socialMedia li:nth-child(4) a:hover {
+    color: #171515;
+}
+
+.contact .infoBox .socialMedia li a {
+    color: #ccc;
+    font-size: 2em;
+}
+
+.contact .infoBox .socialMedia li a:hover {
+    color: white;
+}
+
