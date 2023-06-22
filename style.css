@@ -685,7 +685,7 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
     }
 
     .about p {
-        width: 100%;
+        width: 80%;
         font-size: 15px;
     }
 
