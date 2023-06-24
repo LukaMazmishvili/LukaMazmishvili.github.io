@@ -90,6 +90,10 @@ nav a.active {
     color: lightseagreen;
 }
 
+nav .icon {
+    display: none;
+}
+
 .container {
     opacity: 0;
     align-items: center;
@@ -404,18 +408,20 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
 .project.expand .projectDescription h1 {
     display: block;
     height: 40%;
+    /*visibility: hidden;*/
     margin: 20px;
     text-align: justify;
     text-justify: inter-word;
     /*font-size: 15px;*/
-    transition: font-size 1s ease;
+    transition: font-size 1s linear;
     animation: showText 2s forwards;
 }
 
 @keyframes showText {
     0% {
-        height: 30%;
+        height: 40%;
         opacity: 0;
+        width: 400px;
         font-size: 2px;
 
     }
@@ -425,6 +431,7 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
     100% {
         height: 40%;
         opacity: 1;
+        /*visibility: visible;*/
         font-size: 15px;
     }
 }
@@ -484,6 +491,7 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
 
 .message h1 {
     text-decoration: underline;
+    text-decoration-color: lightseagreen;
     margin-bottom: 80px;
     font-size: 40px;
     color: white;
@@ -657,7 +665,79 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
     color: white;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
+
+    header img {
+        display: none;
+    }
+
+    nav a:not(:nth-child(7)) {
+        box-sizing: border-box;
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 5px
+    }
+    
+    nav a.active {
+        margin: 10px;
+    }
+
+    nav a:not(:nth-child(7), .active) {display: none}
+    nav .icon {
+        display: block;
+        color: white;
+    }
+
+    nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    nav.responsive {
+        display: block;
+        /*height: 50%;*/
+        height: 100vh;
+        background: #0c0c0c;
+    }
+
+    nav.responsive a:nth-child(1){
+        margin-top: 50px;
+    }
+
+    nav.responsive a:not(:nth-child(7), :nth-child(1)) {
+        margin-top: 20px;
+    }
+
+    nav.responsive a:not(:nth-child(6)) {
+        margin-bottom: 10px;
+    }
+
+    nav.responsive a:target {
+
+    }
+
+    nav a.active {
+        display: flex;
+    }
+
+    nav.responsive {position: relative;}
+    nav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        color: lightseagreen;
+        top: 0;
+    }
+    nav.responsive a:not(:nth-child(7)){
+        float: none;
+        display: block;;
+        text-align: right;
+    }
+
+    nav.responsive header img {
+        display: none;
+    }
+
     .wrapper {
         overflow-y: scroll;
         overflow-x: hidden;
@@ -666,6 +746,10 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
         width: 100%;
         scrollbar-width: thin;
         scrollbar-color: transparent transparent;
+    }
+
+    .container {
+        padding: 0;
     }
 
     .home h1 {
@@ -753,5 +837,224 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
         transition: 1s;
         box-shadow: 0 0 0 0.5px black;
     }
+
+    .projects {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .projects h1 {
+        margin-bottom: 100px;
+
+    }
+
+    .projectTitle h1 {
+        margin: 20px ;
+    }
+
+    .projectsWrapper {
+        display: grid;
+        overflow-y: auto;
+        height: 60%;
+        width: 70%;
+    }
+
+    .projectsWrapper .project {
+        height: 450px;
+        width: 100%;
+    }
+
+    .project .seeMore {
+        display: none;
+    }
+
+    .project .projectDescription h1 {
+        display: block;
+        font-size: 18px;
+        margin: 10px;
+        bottom: 0;
+        text-align: center;
+    }
+
+    .message form {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        min-width: 400px;
+    }
+
+    .message h1 {
+        margin-bottom: 50px;
+        font-size: 30px;
+    }
+
+    .contact .infoBox {
+        display: flex;
+        width: 300px;
+        height: 300px;
+    }
+
+    .contact .infoBox .infoWrapper {
+        height: 60%;
+        width: 80%;
+    }
 }
 
+@media only screen and (max-width: 375px) {
+
+    .navbar.responsive header {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .home h1 {
+        font-size: 20px;
+    }
+
+    .home p {
+        font-size: 15px;
+    }
+
+    .about h1 {
+        font-size: 25px;
+    }
+
+    .about p {
+        width: 80%;
+        font-size: 15px;
+    }
+
+    .about .Buttons {
+        display: grid;
+        column-count: 1;
+    }
+
+    .about .Buttons a {
+        width: 100px;
+        margin-top: 30px;
+        margin-left: 10px;
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .about .Buttons a:is(:hover, :focus) {
+        outline-offset: unset;
+        box-shadow: 0 0 2px lightseagreen,
+        0 0 5px lightseagreen;;
+        transform: unset;
+        margin-left: 10px;
+        margin-right: unset;
+    }
+
+    .skillsWrapper {
+        display: grid;
+        column-count: 1;
+        width: 80%;
+        left: 10%;
+        right: 10%;
+        align-items: flex-start;
+        grid-template-columns: 1fr;
+    }
+
+    .skillsWrapper div .skillText {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 20px;
+        margin: 3px;
+    }
+
+    .skillsWrapper div {
+        display: grid;
+        column-count: 1;
+        grid-template-columns: 1fr;
+        width: 100%;
+        /*margin-right: 20px;*/
+    }
+
+    .skillsWrapper div .outerSpan {
+        position: relative;
+        width: 100%;
+        height: 10px;
+        border-radius: 4px;
+        background-color: grey;
+    }
+
+    section.active .skillsWrapper div .outerSpan .innerSpan {
+        display: block;
+        position: absolute;
+        width: 0px;
+        height: 10px;
+        border-radius: 4px;
+        background-color: lightseagreen;
+        animation: fillingAnim 7s infinite;
+        transition: 1s;
+        box-shadow: 0 0 0 0.5px black;
+    }
+
+    .projects {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .projects h1 {
+        margin-bottom: 100px;
+
+    }
+
+    .projectTitle h1 {
+        margin: 20px ;
+    }
+
+    .projectsWrapper {
+        display: grid;
+        overflow-y: auto;
+        height: 60%;
+        width: 70%;
+    }
+
+    .projectsWrapper .project {
+        height: 450px;
+        width: 100%;
+    }
+
+    .project .seeMore {
+        display: none;
+    }
+
+    .project .projectDescription h1 {
+        display: block;
+        font-size: 18px;
+        margin: 10px;
+        bottom: 0;
+        text-align: center;
+    }
+
+    .message form {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        min-width: 400px;
+    }
+
+    .message h1 {
+        margin-bottom: 50px;
+        font-size: 30px;
+    }
+
+    .contact .infoBox {
+        display: flex;
+        width: 300px;
+        height: 300px;
+    }
+
+    .contact .infoBox .infoWrapper {
+        height: 60%;
+        width: 80%;
+    }
+}

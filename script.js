@@ -8,6 +8,23 @@ window.addEventListener("focus", () => {
     document.title = docTitle;
 })
 
+function myFunction() {
+    var x = document.getElementById("navbar");
+    if (x.className === "navbar") {
+        x.className += " responsive";
+    } else {
+        x.className = "navbar";
+    }
+}
+
+const navLinks = document.querySelectorAll('nav a');
+for (var i = 0; i < navLinks.length - 1; i++) {
+    navLinks[i].addEventListener('click', function() {
+        var x = document.getElementById("navbar");
+        x.className = "navbar";
+    });
+}
+
 // const sections = document.querySelectorAll('section');
 // const navLinks = document.querySelectorAll('nav a');
 //
@@ -73,7 +90,7 @@ window.addEventListener("focus", () => {
 
 
 const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('nav a');
+// const navLinks = document.querySelectorAll('nav a');
 
 const expandButtons = document.querySelectorAll('.seeMore');
 const containers = document.querySelectorAll('.project');
@@ -87,6 +104,7 @@ expandButtons.forEach((button, index) => {
             } else {
                 container.classList.remove('expand');
             }
+            document.getElementById("navbar").classList.remove('responsive')
         });
     });
 });
