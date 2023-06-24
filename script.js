@@ -87,8 +87,6 @@ for (var i = 0; i < navLinks.length - 1; i++) {
 //     }
 // }
 
-
-
 const sections = document.querySelectorAll('section');
 // const navLinks = document.querySelectorAll('nav a');
 
