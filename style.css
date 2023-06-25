@@ -103,7 +103,7 @@ nav .icon {
     padding: 0 10%;
     /*height: 100vh;*/
     height: 100%;
-    transition: 2s;
+    /*transition: 2s;*/
 }
 
 .container.active {
@@ -704,6 +704,11 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
         display: block;
         /*height: 50%;*/
         height: 100vh;
+        transition: 0.5s;
+        background: #0c0c0c;
+    }
+
+    header.responsive {
         background: #0c0c0c;
     }
 
@@ -719,10 +724,6 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
         margin-bottom: 10px;
     }
 
-    nav.responsive a:target {
-
-    }
-
     nav a.active {
         display: flex;
     }
@@ -736,7 +737,8 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
     }
     nav.responsive a:not(:nth-child(7)){
         float: none;
-        display: block;;
+        display: block;
+        transition: 2s;
         text-align: right;
     }
 
@@ -752,6 +754,10 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
         width: 100%;
         scrollbar-width: thin;
         scrollbar-color: transparent transparent;
+    }
+
+    section .heading {
+        text-decoration: lightseagreen underline;
     }
 
     .container {
@@ -772,7 +778,9 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
 
     .about p {
         width: 80%;
-        font-size: 15px;
+        text-align: justify;
+        text-justify: inter-word;
+        font-size: 13px;
     }
 
     .about .Buttons {
@@ -781,20 +789,10 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
     }
 
     .about .Buttons a {
-        width: 100px;
-        margin-top: 30px;
+        margin-top: 15px;
         margin-left: 10px;
         font-size: 10px;
         padding: 5px;
-    }
-
-    .about .Buttons a:is(:hover, :focus) {
-        outline-offset: unset;
-        box-shadow: 0 0 2px lightseagreen,
-                    0 0 5px lightseagreen;;
-        transform: unset;
-        margin-left: 10px;
-        margin-right: unset;
     }
 
     .skillsWrapper {
@@ -812,7 +810,7 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        height: 20px;
+        height: 15px;
         margin: 3px;
     }
 
@@ -827,32 +825,31 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
     .skillsWrapper div .outerSpan {
         position: relative;
         width: 100%;
-        height: 10px;
+        height: 7px;
         border-radius: 4px;
         background-color: grey;
     }
 
     section.active .skillsWrapper div .outerSpan .innerSpan {
-        display: block;
-        position: absolute;
-        width: 0px;
-        height: 10px;
-        border-radius: 4px;
-        background-color: lightseagreen;
-        animation: fillingAnim 7s infinite;
-        transition: 1s;
-        box-shadow: 0 0 0 0.5px black;
+        height: 7px;
+    }
+
+    .skills div h3 {
+        margin-bottom: 5px;
+    }
+
+    .skills h1 {
+        margin-bottom: 5px;
     }
 
     .projects {
         display: flex;
         flex-direction: column;
-
     }
 
     .projects h1 {
-        margin-bottom: 100px;
-
+        margin-bottom: 30px;
+        font-size: 20px;
     }
 
     .projectTitle h1 {
@@ -867,8 +864,8 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
     }
 
     .projectsWrapper .project {
-        height: 450px;
-        width: 100%;
+        height: 350px;
+        width: 80%;
     }
 
     .project .seeMore {
@@ -877,22 +874,27 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
 
     .project .projectDescription h1 {
         display: block;
-        font-size: 18px;
+        font-size: 12px;
         margin: 10px;
         bottom: 0;
-        text-align: center;
+        text-align: justify;
+        text-justify: inter-word;
     }
 
     .message form {
         width: 100%;
         margin: 0;
         padding: 0;
-        min-width: 400px;
+        min-width: 300px;
     }
 
     .message h1 {
         margin-bottom: 50px;
-        font-size: 30px;
+        font-size: 22px;
+    }
+
+    .message input, textarea {
+        font-size: 10px;
     }
 
     .contact .infoBox {
@@ -930,11 +932,23 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
 
     .about p {
         width: 80%;
-        font-size: 15px;
+        font-size: 10px;
+    }
+
+    .about h1 {
+        font-size: 20px;
     }
 
     .about .Buttons a {
         margin-top: 10px;
+    }
+
+    .skills div h3 {
+        margin-bottom: 5px;
+    }
+
+    .skills h1 {
+        margin-bottom: 5px;
     }
 
     .skillsWrapper {
@@ -946,20 +960,20 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        height: 18px;
+        height: 15px;
         margin: 3px;
     }
 
     .skillsWrapper div .outerSpan {
         position: relative;
         width: 100%;
-        height: 8px;
+        height: 5px;
         border-radius: 4px;
         background-color: grey;
     }
 
     section.active .skillsWrapper div .outerSpan .innerSpan {
-        height: 8px;
+        height: 5px;
     }
 
     .projects h1 {
@@ -1014,4 +1028,35 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
         padding-inline-start: 20px;
     }
 
+}
+
+@media only screen and (max-width: 320px) {
+
+    .projects h1 {
+        margin-bottom: 50px;
+        font-size: 18px;
+    }
+
+    .projectTitle h1 {
+        margin-bottom: 13px;
+    }
+
+    .projectsWrapper .project {
+        height: 350px;
+    }
+
+    .project .projectDescription h1 {
+        font-size: 10px;
+    }
+
+    .message form {
+        display: flex;
+        flex-direction: column;
+        min-width: 230px;
+        margin: 0;
+    }
+
+    .message label {
+        font-size: 15px;
+    }
 }

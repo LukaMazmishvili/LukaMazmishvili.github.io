@@ -10,10 +10,13 @@ window.addEventListener("focus", () => {
 
 function myFunction() {
     var x = document.getElementById("navbar");
+    var header = document.getElementById("header")
     if (x.className === "navbar") {
+        header.className += " responsive"
         x.className += " responsive";
     } else {
         x.className = "navbar";
+        header.className = "header"
     }
 }
 
