@@ -134,13 +134,13 @@ nav .icon {
     overflow: hidden;
     position: relative;
     color: white;
+    text-decoration: none;
     font-family: "Courier New", Courier, monospace;
 }
 
 .home h1 span {
     color: lightseagreen;
     font-weight: bold;
-    text-decoration: none
 }
 
 .home p {

@@ -80,7 +80,7 @@
       <workItem from="1687625336532" duration="15807000" />
       <workItem from="1687678065244" duration="2550000" />
       <workItem from="1687717720041" duration="2071000" />
-      <workItem from="1687805870260" duration="2274000" />
+      <workItem from="1687805870260" duration="2336000" />
     </task>
     <task id="LOCAL-00001" summary="Added Skills Page, Small changes in overall project">
       <created>1687277197969</created>
@@ -152,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687808037056</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Final Changes">
+      <created>1687808172495</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1687808172495</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
