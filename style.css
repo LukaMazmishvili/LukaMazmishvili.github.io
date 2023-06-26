@@ -665,6 +665,64 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
     color: white;
 }
 
+@media only screen and (max-width: 1000px) {
+    .home h1 {
+        font-size: 35px;
+        overflow: hidden;
+        position: relative;
+        color: white;
+        font-family: "Courier New", Courier, monospace;
+    }
+
+    .home p {
+        position: relative;
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+        font-family: "Courier New", Courier, monospace;
+    }
+
+    .about h1 {
+        font-size: 25px;
+        text-decoration: underline;
+        color: white;
+    }
+
+    .about p {
+        padding: 30px;
+        font-size: 15px;
+        text-align: justify;
+        text-justify: inter-word;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+        color: white;
+    }
+
+    .skillsWrapper div {
+        display: grid;
+        column-count: 1;
+        grid-template-columns: 1fr;
+        width: 250px;
+        margin-right: 20px;
+    }
+
+    .skillsWrapper div .outerSpan {
+        position: relative;
+        width: 250px;
+        height: 15px;
+        border-radius: 4px;
+        background-color: grey;
+    }
+
+    .message h1 {
+        text-decoration: underline;
+        text-decoration-color: lightseagreen;
+        margin-bottom: 50px;
+        font-size: 25px;
+        color: white;
+    }
+}
+
 @media only screen and (max-width: 700px) {
 
     header img {
