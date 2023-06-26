@@ -140,6 +140,7 @@ nav .icon {
 .home h1 span {
     color: lightseagreen;
     font-weight: bold;
+    text-decoration: none
 }
 
 .home p {
