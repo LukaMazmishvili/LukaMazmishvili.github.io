@@ -418,6 +418,7 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
     /*font-size: 15px;*/
     transition: font-size 1s linear;
     animation: showText 2s forwards;
+    text-decoration: none;
 }
 
 @keyframes showText {
