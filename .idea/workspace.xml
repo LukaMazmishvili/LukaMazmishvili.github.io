@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7efbc71b-4966-4227-91fc-8a33a12f69a5" name="Changes" comment="Changed Small Design Detail">
+    <list default="true" id="7efbc71b-4966-4227-91fc-8a33a12f69a5" name="Changes" comment="Changed Small Design Detail (1)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +80,7 @@
       <workItem from="1687625336532" duration="15807000" />
       <workItem from="1687678065244" duration="2550000" />
       <workItem from="1687717720041" duration="2071000" />
-      <workItem from="1687805870260" duration="2499000" />
+      <workItem from="1687805870260" duration="2873000" />
     </task>
     <task id="LOCAL-00001" summary="Added Skills Page, Small changes in overall project">
       <created>1687277197969</created>
@@ -165,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687808254637</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Changed Small Design Detail (1)">
+      <created>1687808403889</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1687808403889</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +200,7 @@
     <MESSAGE value="added some responsiveness details" />
     <MESSAGE value="Final Changes" />
     <MESSAGE value="Changed Small Design Detail" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed Small Design Detail" />
+    <MESSAGE value="Changed Small Design Detail (1)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed Small Design Detail (1)" />
   </component>
 </project>

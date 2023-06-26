@@ -375,6 +375,10 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
     place-items: center;
 }
 
+.project h1 {
+    text-decoration: none;
+}
+
 .project {
     display: flex;
     position: relative;
@@ -406,6 +410,7 @@ section .active .skillsWrapper div .outerSpan .innerSpan:hover {
 
 .project .projectDescription h1 {
     display: none;
+    text-decoration: none;
 }
 
 .project.expand .projectDescription h1 {
