@@ -25,6 +25,12 @@ h1, h3, h5, p {
     font-family: "Courier New", Courier, monospace;
 }
 
+a {
+    color: white;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+}
+
 h1 {
     text-decoration: lightseagreen underline;
 }
@@ -265,6 +271,7 @@ nav .icon {
     align-items: center;
     color: white;
     width: 150px;
+    font-family: "Courier New", Courier, monospace;
     text-align: center;
     box-sizing: border-box;
     margin-top: 50px;
@@ -330,13 +337,6 @@ nav .icon {
 
 .skillsWrapper div .outerSpan .innerSpan {
     display: none;
-    /*position: absolute;*/
-    /*width: 0px;*/
-    /*height: 15px;*/
-    /*border-radius: 4px;*/
-    /*background-color: lightseagreen;*/
-    /*transition: 1s;*/
-    /*box-shadow: 0 0 0 0.5px black;*/
 }
 
 section.active .skillsWrapper div .outerSpan .innerSpan {
